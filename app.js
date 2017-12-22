@@ -22,6 +22,8 @@ var express = require ('express'),
 
 console.log("server started on ",PORT);
 // ------------------------- Router ---------------------------- we will use routeing method letter
+var user = require('./routes/user');
+app.use('/', user);
 
 
 console.log(totalcount);
