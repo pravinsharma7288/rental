@@ -2,7 +2,6 @@ var express = require ('express'),
 	http = require ('http'),
 	PORT = process.env.PORT,
     bodyParser = require('body-parser'),
-	// user =require('./routes/user'),
 	app = express();
 	app.use(bodyParser.json()),
 	app.listen(PORT);
@@ -21,7 +20,7 @@ var express = require ('express'),
 	});
 
 console.log("server started on ",PORT);
-// ------------------------- Router ---------------------------- we will use routeing method letter
+// ------------------------- Router ----------------------------
 var user = require('./routes/user');
 app.use('/', user);
 
@@ -31,7 +30,6 @@ console.log(totalcount);
 //console.log(user,"here i am ");
 //app.use('/user', user);
 var userController = require('./controller/userController');
-
 	app.post('/user', function(req,res){
 		userController.setUser(req, function(response){
 	  	res.send(response);
@@ -41,5 +39,5 @@ var userController = require('./controller/userController');
 		userController.getUser(req, function(response){
 			res.send(response);
 		});
-// 	});
+	});
 module.exports = app	
