@@ -25,7 +25,7 @@ var user = require('./routes/user');
 app.use('/', user);
 
 
-console.log(totalcount);
+// console.log(totalcount);
 //var user = require('./routes/user');
 //console.log(user,"here i am ");
 //app.use('/user', user);
